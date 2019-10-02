@@ -2,9 +2,9 @@
 
 ## Descrizione
 
-Definizione del servizio FCA (File Conversion Agent) per indicizzazione e conversione (in PDF) di documenti. 
+Definizione del servizio [FCA](https://github.com/agenziaentrateriscossione/docway-fca) (File Conversion Agent) per indicizzazione e conversione (in PDF) di documenti. 
 
-Il progetto contiene l'intera logica di gestione del pool di host FCS (selezione RoundRobin o tramite analisi della coda delle richieste). Per poter essere utilizzato necessita l'estensione della classe astratta _Fca_ con relativa implementazione dei metodi
+Il progetto contiene l'intera logica di gestione del pool di host [FCS](https://github.com/agenziaentrateriscossione/docway-fcs) (selezione RoundRobin o tramite analisi della coda delle richieste). Per poter essere utilizzato necessita l'estensione della classe astratta _Fca_ con relativa implementazione dei metodi
 
 - __public List<FcsRequest> loadFcsPendingRequests() throws Exception__: Recupero di tutti i documenti per i quali è richiesta l'attività di indicizzazione o conversione in PDF;
 - __public void onRunException(Exception e)__: Metodo invocato in caso di catch di una eccezione bloccante (stop del servizio) su FCA;
